@@ -31,13 +31,13 @@
    <link rel="icon" type="image/png" sizes="96x96" href="../../../resources/img/favicon/favicon-96x96.png">
    <link rel="icon" type="image/png" sizes="16x16" href="../../../resources/img/favicon/favicon-16x16.png">
    <link rel="manifest" href="../../../resources/img/favicon/manifest.json">
-   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileColor" content="#00a000">
    <meta name="msapplication-TileImage" content="../../../resources/img/favicon/ms-icon-144x144.png">
-   <meta name="theme-color" content="#ffffff">
+   <meta name="theme-color" content="#00a000">
 
    <!--favicon-->
 
-<link rel="stylesheet" href="assets/css/login.css">
+<link rel="stylesheet" href="../assets/css/login.css">
 
   </head>
   <body>
@@ -70,7 +70,7 @@
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
     
-    <p class="mt-5 mb-3 text-white">©2022 @@@ Company, Inc</p>
+    <p class="mt-5 mb-3 text-white">©2022 Cadastrapet Company, Inc</p>
   </form>
 
 </main>

@@ -35,14 +35,14 @@
    <link rel="icon" type="image/png" sizes="96x96" href="../../../resources/img/favicon/favicon-96x96.png">
    <link rel="icon" type="image/png" sizes="16x16" href="../../../resources/img/favicon/favicon-16x16.png">
    <link rel="manifest" href="../../../resources/img/favicon/manifest.json">
-   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileColor" content="#00a000">
    <meta name="msapplication-TileImage" content="../../../resources/img/favicon/ms-icon-144x144.png">
-   <meta name="theme-color" content="#ffffff">
+   <meta name="theme-color" content="#00a000">
 
    <!--favicon-->
 
     <title>Dashboard</title>
-    <script src="../../../resources/JS/notification_adm.js"></script>
+    
 </head>
 
 <body style="background-color: #00a000">
@@ -53,7 +53,7 @@
     <div class="container-fluid">
       <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-2 text-light" href="#">
         <img src="assets/img/imgHome.png" alt="" width="50" height="50">
-        Uninassau 
+        Cadastrapet
       </a>
     </div>
   </nav>
@@ -190,7 +190,7 @@ function pegar_dados(idADM, nomeADM){
 
 <footer class="py-3 my-4 corPrimaria">
  
-  <p class="text-center text-white">© 2022 Uninassau Company, Inc</p>
+  <p class="text-center text-white">© 2022 Cadastrapet Company, Inc</p>
   <p class="text-center text-white">Sistema web desenvolvido por Geanderson Ferreira & Viviane Raquel</p>
 
 </footer>
