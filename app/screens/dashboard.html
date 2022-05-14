@@ -1,157 +1,117 @@
 <?php 
-    // session_start();
-    // include('../verifica_login.php');
+
+    session_start();
+    //include('verifica.php');
 
     //incluindo a conexao
     include('../controller/conexao.php');
 
     //pegando os dados das tabelas e transformando em vareaveis
-    $sql = "SELECT * FROM `administrador`";
+    $sql = "SELECT * FROM `veiculos`";
     $dados= mysqli_query($conexao,$sql);
     
  ?>
 
-<html lang="pt-br"><head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.88.1">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
-    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!--favicon-->
-    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
-   <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon/apple-icon-60x60.png">
-   <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon/apple-icon-72x72.png">
-   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon/apple-icon-76x76.png">
-   <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
-   <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
-   <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
-   <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
-   <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
-   <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/favicon/android-icon-192x192.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
-   <link rel="manifest" href="../assets/img/favicon/manifest.json">
-   <meta name="msapplication-TileColor" content="#00a000">
-   <meta name="msapplication-TileImage" content="../assets/img/favicon/ms-icon-144x144.png">
-   <meta name="theme-color" content="#00a000">
-   <!--favicon-->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Dashboard</title>
-    
-</head>
+    <!--link css-->
+    <link rel="stylesheet" href="../assets/css/style.css">
 
-<body style="background-color: #00a000">
+    <title>Loc Car</title>
+  </head>
+  <body class="corSecundaria">
+   
 
-  <!--navbar inicio-->
-
-  <nav class="navbar navbar-expand-lg navbar-light corPrimaria">
+<nav class="navbar navbar-light corPrimaria">
     <div class="container-fluid">
-      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-2 text-light" href="#">
-        <img src="../assets/img/imgHome.png" alt="" width="50" height="50">
-        Cadastrapet
-      </a>
+      <h1 class="navbar-brand text-white" href="#">
+       <img src="../assets/img/imgHome.png" style="max-width: 54px;" alt="">
+        Cadastrapet</h1>
     </div>
-  </nav>
+</nav>
 
-  <!--navbar fim-->
+<div>
+  <br><br>
+</div>
 
+<div class="card text-center container corPrimaria" style="max-width: 400px;">
+ 
+  <div class="card-body">
 
+    <p class="fs-1 text-white">Bem vindo</p>
 
-    <!--menu da dashboard-->
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="button">Cadastrar pet</button>
+      <button class="btn btn-primary" type="button">Cadastrar usuário</button>
+      <button class="btn btn-primary" type="button">Sair</button>
+    </div>
+    
+  </div>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
-       
-        <div class="btn-toolbar mb-2 mb-md-0">
-     
-          <p class="text-white">_</p>
-          
-          <a href="tela_de_cadastro.html" type="button" class="btn btn-dark">
-              Cadastrar pet
-          </a>
+</div>
 
-        </div>
-      </div>
+<div>
+  <br><br>
+</div>
 
-      <!--fim menuda dasbord-->
-     
-        <div>
-          <br>
-          <br>
-          <br>
-          <br>
-        </div>
+<section class="container">
 
-      <!--seção dos administradores-->
+<table class="table bg-light">
 
-      <h2 id="adm">Administradores cadastrados</h2> <!--titulo da tabela-->
+  <thead>
+    <tr>    
+      <th scope="col">marca</th>
+      <th scope="col">modelo</th>
+      <th scope="col">cor</th>
+      <th scope="col">placa</th>
+      <th scope="col">q de portas</th>
+    </tr>
+  </thead>
 
-      <div>
-        <br>
-        <br>
-      </div>
-
-      <div class="table-responsive">
-
-          <!--tabela inicio-->
-
-        <table class="table table-sm"> <!--deixar ela listrada table-striped-->
-         
-        <thead>
-            <tr>
-              
-              <th scope="col"><p class="fs-5">Nome</p></th>
-              <th scope="col"><p class="fs-5">Cpf</p></th>
-              <th scope="col"><p class="fs-5">Telefone</p></th>
-              <th scope="col"><p class="fs-5">Senha</p></th>
-              <th scope="col"><p class="fs-5">Função</p></th>
-              <th scope="col"><p class="fs-5">Opções</p></th>
-
-            </tr>
-          </thead>
-
-          <tbody>
-                  
-          <?php
+  <tbody>
+    
+  <?php
 
 //recebendo varevel dados 
 while ($linha= mysqli_fetch_assoc ( $dados)) {
    
    //pegando os dados da vareavel dados e colocando em novas vareaveis e colocando na tabela
 
-   $idADM = $linha ['idADM'];
-   $nomeADM= $linha ['nomeADM'];
-   $cpfADM= $linha ['cpfADM'];
-   $telefoneADM= $linha ['telefoneADM'];
-   $senhaADM= $linha ['senhaADM'];
-   $tipoADM= $linha ['tipoADM'];
+   $id = $linha ['id'];
+   $marca = $linha ['marca'];
+   $modelo = $linha ['modelo'];
+   $cor= $linha ['cor'];
+   $placa= $linha ['placa'];
+   $qportas= $linha ['qportas'];
 
-
-    echo "<tr>
-    <th scope='row'>$nomeADM</th>
-    <td>$cpfADM</td>
-    <td>$telefoneADM</td>
-    <td>$senhaADM</td>
-    <td>$tipoADM</td>
-    <td>
-    <a href='adit_adm.php? idADM=$idADM' class='btn btn-success'> Editar </a>
-    <a href='#' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#confirmar'
-    onClick= " . '"' . "pegar_dados( $idADM , '$nomeADM')" . '"'. ">Excluir</a>
+    echo "
     
-  </tr>";
+    <tr>
+    <td>$marca</td>
+    <td>$modelo</td>
+    <td>$cor</td>
+    <td>$placa</td>
+    <td>$qportas</td> 
+    <td>
+    <a href='tela_de_editar.php? id=$id' class='btn btn-success'> Editar </a>
+    <a href='#' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#confirmar'
+    onClick= " . '"' . "pegar_dados( $id )" . '"'. ">Excluir</a>
+    </td>
+    </tr> 
+    
+    ";
 }
 
 ?>
-         
-          </tbody>
 
-        </table>
-
-        <!--fim da tabela dos adm-->
 <!-- Modal-->
 <div class="modal fade" id="confirmar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -162,37 +122,44 @@ while ($linha= mysqli_fetch_assoc ( $dados)) {
       </div>
       <div class="modal-body">
 
-        <form action="excluirADM.php" method="POST">
-       <p> Realmente deseja EXCLUIR <b ID="nomeADM_pessoa">Nome da pessoa</b>?</p>
+      <form action="../controller/excluir.php" method="POST">
+       <p> Realmente deseja EXCLUIR?</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <input type="hidden" name="idADM" ID="cod_pessoa" value="">
-        <input type="hidden" name="nomeADM" ID="cod_pessoa1" value="">
-        <input type="submit" class="btn btn-danger" value="Confirmar">
-        <script type="text/Javascript">
+          <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
 
-function pegar_dados(idADM, nomeADM){
+           <input type="hidden" name="id" ID="codCDN_pessoa" value="">
+
+           <input type="submit" class="btn btn-danger" value="Confirmar">
+           
+           <script>
+           
+           function pegar_dados(id){
+
+            //document.getElementById("cod_pessoa2").value = nomeCDN;
+            document.getElementById("codCDN_pessoa").value = id; 
+
+           }
+
+           </script>
+
+      </form>
+</div>
 
 
-    document.getElementById("nomeADM_pessoa").innerHTML = nomeADM; 
-    document.getElementById("cod_pessoa1").value = nomeADM; 
-    document.getElementById("cod_pessoa").value = idADM;
+</table>
 
-}
+</section>
 
-</script>
-        </form>
-      </div>
+    <!-- Optional JavaScript; choose one of the two! -->
 
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-<footer class="py-3 my-4 corPrimaria">
- 
-  <p class="text-center text-white">© 2022 Cadastrapet Company, Inc</p>
-  <p class="text-center text-white">Sistema web desenvolvido por Geanderson Ferreira & Viviane Raquel</p>
-
-</footer>
-    
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body></html>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
