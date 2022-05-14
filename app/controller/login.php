@@ -1,21 +1,21 @@
 <?php
 
-include "../conexao.php";
+include "conexao.php";
 
-if (isset($_POST['cpfADM'])) {
-  $cpfADM= $_POST ['cpfADM'];
-  $senhaADM = $_POST ['senhaADM']; 
+if (isset($_POST['email'])) {
+  $email= $_POST ['email'];
+  $senha = $_POST ['senha']; 
 
-$sql = "SELECT * FROM `administrador` WHERE cpfADM='$cpfADM'AND senhaADM= '$senhaADM'";
+$sql = "SELECT * FROM `usuarios` WHERE email='$email'AND senha= '$senha'";
 
 if ($result = mysqli_query($conexao, $sql)){
   $num_resgitros = mysqli_num_rows($result);
      if ($num_resgitros ==1) {
      $linha= mysqli_fetch_assoc($result);
-       if (($cpfADM==$linha['cpfADM']) and ($senhaADM==$linha['senhaADM'])) { 
+       if (($email==$linha['email']) and ($senha==$linha['senha'])) { 
        session_start();
-       $_SESSION['cpfADM']= "Vivi";  
-       header("location: dashboard_adm.php");
+       $_SESSION['email']= "usuario: adm";  
+       header("location: ../views/dashboard.php");
   
        } else {
   
@@ -24,7 +24,7 @@ if ($result = mysqli_query($conexao, $sql)){
        echo  "<script>
       
        alert('Login inválido');
-       window.location='tela_de_login_adm.php';
+       window.location='../views/tela_de_login.php';
       
        </script>";
      
@@ -37,7 +37,7 @@ if ($result = mysqli_query($conexao, $sql)){
       echo  "<script>
       
       alert('Login ou senha não foram encontrados ou inválido.');
-      window.location='tela_de_login_adm.php';
+      window.location='../views/tela_de_login.php';
       
       </script>";
 
@@ -51,7 +51,7 @@ if ($result = mysqli_query($conexao, $sql)){
       echo  "<script>
       
       alert('Nenhum resultado do banco');
-      window.location='tela_de_login_adm.php';
+      window.location='../views/tela_de_login.php';
       
       </script>";
    

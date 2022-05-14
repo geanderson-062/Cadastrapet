@@ -13,7 +13,7 @@
 <?php
 
 //inscluindo arquivo de conexao
-include "../conexao.php";
+include "conexao.php";
 
 //criando vareaveis para editar
 $idADM = $_POST ['idADM'];
@@ -33,7 +33,7 @@ if (mysqli_query($conexao , $sql)) {
   echo  "<script>
       
   alert('Alterado com sucesso');
-  window.location='dashboard_adm.php';
+  window.location='../screens/dashboard.php';
  
   </script>";
    
@@ -45,7 +45,7 @@ if (mysqli_query($conexao , $sql)) {
   echo  "<script>
       
     alert('NÃO Alterado com sucesso');
-    window.location='dashboard_CDN.php';
+    window.location='../screens/tela_de_cadastro.php';
    
     </script>";
     

@@ -4,7 +4,7 @@
 //session_start();
 if(!$_SESSION['usuario']) {
 
-    header('Location: tela_de_login.php');
+    header('Location: ../screens/tela_de_login.php');
     exit();
     
 }

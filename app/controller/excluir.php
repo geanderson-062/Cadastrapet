@@ -11,7 +11,7 @@
 
 <?php
 
-include "../conexao.php";
+include "conexao.php";
 
 $idADM = $_POST ['idADM'];
 $nomeADM= $_POST ['nomeADM'];

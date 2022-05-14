@@ -12,7 +12,7 @@
 <?php
 
 //incluindo a conexao
-include "../conexao.php";
+include "conexao.php";
 
 //criando vareaveis para armazenar dados digitados no input
 $nomeADM= $_POST ['nomeADM'];
