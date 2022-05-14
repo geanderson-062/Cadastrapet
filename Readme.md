@@ -1,3 +1,4 @@
+
 #avaliacao de Dev Mobile.
 
 1- componetizaCao
@@ -15,5 +16,13 @@ Desenvolver API com PHP para retornar um json
 Banco de dados? 
 
 comando fecht para consumir api
+
+# cores
+
+#00a000 cor primaria
+
+#005100 cor de fundo 
+
+
 
 
