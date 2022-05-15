@@ -43,7 +43,7 @@
 
 <main class="form-signin text-center corPrimaria"  style="max-width: 400px; border-radius: 5px;">
 
-  <form action="login_adm.php" method="POST" >
+  <form action="../controller/login.php" method="POST" >
 
     <img class="mb-4" src="../assets/img/imgHome.png" alt="" width="54" height="54">
 

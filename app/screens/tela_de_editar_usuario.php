@@ -1,10 +1,27 @@
+<?php
+
+//incluindo arquivo de conexao 
+include "../controller/conexao.php";
+
+//pegando o id 
+$idADM= $_GET ['idADM']?? '';
+
+//selecionando a tabela 
+$sql= "SELECT * FROM `administrador` WHERE idADM = $idADM";
+
+//colocando vareaveis para editar
+$dados = mysqli_query($conexao , $sql);
+$linha = mysqli_fetch_assoc($dados);
+
+?>
+
 <!DOCTYPE html>
 <html lang="PTBR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar pet</title>
+    <title>Atualizar Usuário</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -32,71 +49,65 @@
 </head>
 <body>
 
-     <nav class="navbar navbar-light corPrimaria">
-         <div class="container-fluid">
-           <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-2 text-white" href="#">
-              <img src="../assets/img/imgHome.png" alt="" width="50" height="50">
-              Cadastrapet </a>
-         </div>
-     </nav>
-
-    <div>
-        <br>
-       
+  <nav class="navbar navbar-light corPrimaria">
+    <div class="container-fluid">
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-2 text-white" href="#">
+         <img src="../assets/img/imgHome.png" alt="" width="50" height="50">
+         Cadastrapet </a>
     </div>
-   
-      <section class="container corPrimaria" style="max-width: 400px; border-radius: 5px;">
-        <form method="post" action="cadastra_administrador.php">
-         <br>   
-          <p class="fs-2 text-white text-center">Cadastrar pet</p>
+</nav>
 
-          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_z9ed2jna.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+<div>
+   <br>
+</div>
 
-          <div class="mb-3">
-            <label for="nomeADM" class="form-label text-white">Nome:</label>
-            <input required name="nomeADM" type="text" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
-          </div>
-          <div class="mb-3">
-            <label for="telefoneADM" class="form-label text-white">Telefone:</label>
-            <input required name="telefoneADM" type="text" class="form-control" id="telefoneADM" aria-describedby="emailHelp" placeholder="Ex: 89196517">    
-          </div>
-          <div class="mb-3">
-            <label for="cpfADM" class="form-label text-white">Cpf:</label>
-            <input required name="cpfADM" type="text" class="form-control" id="cpfADM" aria-describedby="emailHelp" placeholder="Ex: 12220840409">
-          </div>
-          <div class="mb-3">
-            <label for="senhaADM" class="form-label text-white">Senha:</label>
-            <input required name="senhaADM" type="text" class="form-control" id="senhaADM" aria-describedby="emailHelp" placeholder="Ex: 123marcones321">
-          </div>
-          <div class="mb-3">
-            <label for="tipoADM" class="form-label text-white">Tipo:</label>
-            <input required name="tipoADM" type="text" class="form-control" id="tipoADM" aria-describedby="emailHelp" placeholder="Ex: Administrador ">
-          </div>
-         
-          <div class="d-grid gap-2 col-6 mx-auto">
+ <section class="container corPrimaria" style="max-width: 400px; border-radius: 5px;">
+   <form method="post" action="cadastra_administrador.php">
+    <br>   
+     <p class="fs-2 text-white text-center">Atualizar cadastro</p>
 
-            <input type="submit" class="btn btn-primary"  name="submit" id="submit" type="submit" value="Cadastrar">
-             
-          </div>
-         <br>  
-        </form>
-      </section>
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+     <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_j0xeoest.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
 
-    <div>
+      <div class="mb-3">
+        <label for="nome" class="form-label text-white">Email:</label>
+        <input required name="nome" type="email" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
+      </div>
+  
+      <div class="mb-3">
+        <label for="senha" class="form-label text-white">Senha:</label>
+        <input required name="senha" type="password" class="form-control" id="floatingPassword" aria-describedby="emailHelp" placeholder="Ex: 123marcones321">
+      </div>
+
+      <div class="checkbox mb-3 text-white text-center">
+        <label>
+          <input type="checkbox" value="remember-me" onclick="mostrarOcultarSenha()"> Exibir Senha
+        </label>
+      </div>
     
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+     <div class="d-grid gap-2 col-6 mx-auto">
+
+       <input type="submit" class="btn btn-primary"  name="submit" id="submit" type="submit" value="Atualizar">
         
-    </div>
+     </div>
+    <br>  
+   </form>
+ </section>
+
+<div>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+</div>
 
 <!--preloader-->
 
@@ -105,8 +116,9 @@
 </div>
 <script src="../assets/js/preloader.js"></script> 
 <link rel="stylesheet" href="../assets/css/preloader.css">
+
 <!--preloader-->
- 
+
 <footer class="corPrimaria">
 
   <br>
@@ -119,6 +131,9 @@
 
 </footer>
 
+    <script src="../assets/js/exibir_senha.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>

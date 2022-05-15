@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar usuário</title>
+    <title>Cadastrar pet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -30,7 +30,7 @@
    <!--favicon-->
 
 </head>
-<body class="corSecundaria">
+<body>
 
      <nav class="navbar navbar-light corPrimaria">
          <div class="container-fluid">
@@ -42,36 +42,36 @@
 
     <div>
         <br>
-      
+       
     </div>
    
       <section class="container corPrimaria" style="max-width: 400px; border-radius: 5px;">
-        <form method="post" action="cadastra_administrador.php">
+        <form method="post" action="../controller/cadastrar_pet.php">
          <br>   
-          <p class="fs-2 text-white text-center">Cadastrar usuário</p>
+          <p class="fs-2 text-white text-center">Cadastrar pet</p>
 
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_Q1pZ8v.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
+          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_z9ed2jna.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
 
           <div class="mb-3">
-            <label for="nomeADM" class="form-label text-white">Nome:</label>
-            <input required name="nomeADM" type="text" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
+            <label for="nome" class="form-label text-white">Nome do animal:</label>
+            <input required name="nome" type="text" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: Rafael" autofocus>    
           </div>
           <div class="mb-3">
-            <label for="telefoneADM" class="form-label text-white">Telefone:</label>
-            <input required name="telefoneADM" type="text" class="form-control" id="telefoneADM" aria-describedby="emailHelp" placeholder="Ex: 89196517">    
+            <label for="raca" class="form-label text-white">Raça:</label>
+            <input required name="raca" type="text" class="form-control" id="telefoneADM" aria-describedby="emailHelp" placeholder="Ex: bulldog">    
           </div>
           <div class="mb-3">
-            <label for="cpfADM" class="form-label text-white">Cpf:</label>
-            <input required name="cpfADM" type="text" class="form-control" id="cpfADM" aria-describedby="emailHelp" placeholder="Ex: 12220840409">
+            <label for="endereco" class="form-label text-white">Endereço:</label>
+            <input required name="endereco" type="text" class="form-control" id="cpfADM" aria-describedby="emailHelp" placeholder="Ex: madalena - recife">
           </div>
           <div class="mb-3">
-            <label for="senhaADM" class="form-label text-white">Senha:</label>
-            <input required name="senhaADM" type="text" class="form-control" id="senhaADM" aria-describedby="emailHelp" placeholder="Ex: 123marcones321">
+            <label for="telefone" class="form-label text-white">Telefone:</label>
+            <input required name="telefone" type="text" class="form-control" id="senhaADM" aria-describedby="emailHelp" placeholder="Ex: 9896517">
           </div>
           <div class="mb-3">
-            <label for="tipoADM" class="form-label text-white">Tipo:</label>
-            <input required name="tipoADM" type="text" class="form-control" id="tipoADM" aria-describedby="emailHelp" placeholder="Ex: Administrador ">
+            <label for="responsavel" class="form-label text-white">Responsavel:</label>
+            <input required name="responsavel" type="text" class="form-control" id="tipoADM" aria-describedby="emailHelp" placeholder="Ex: Marcones ">
           </div>
          
           <div class="d-grid gap-2 col-6 mx-auto">
@@ -118,7 +118,6 @@
   <br>
 
 </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
