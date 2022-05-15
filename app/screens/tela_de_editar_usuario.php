@@ -1,5 +1,8 @@
 <?php
 
+//seção inciada
+session_start();
+
 //incluindo arquivo de conexao 
 include "../controller/conexao.php";
 

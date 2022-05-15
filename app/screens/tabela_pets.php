@@ -7,7 +7,7 @@
     include('../controller/conexao.php');
 
     //pegando os dados das tabelas e transformando em vareaveis
-    $sql = "SELECT * FROM `veiculos`";
+    $sql = "SELECT * FROM `pets`";
     $dados= mysqli_query($conexao,$sql);
     
  ?>
@@ -79,16 +79,22 @@
          
       </div>
     </div>
+
+<div>
+  <br>
+  <br>
+  <br>
+</div>
       
 <table class="table bg-light">
 
   <thead>
     <tr>    
-      <th scope="col">marca</th>
-      <th scope="col">modelo</th>
-      <th scope="col">cor</th>
-      <th scope="col">placa</th>
-      <th scope="col">q de portas</th>
+      <th scope="col">Nome do pet</th>
+      <th scope="col">Raça do pet</th>
+      <th scope="col">Endereço do Responsavel</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Responsavel</th>
     </tr>
   </thead>
 
@@ -101,23 +107,23 @@ while ($linha= mysqli_fetch_assoc ( $dados)) {
    
    //pegando os dados da vareavel dados e colocando em novas vareaveis e colocando na tabela
 
-   $id = $linha ['id'];
-   $marca = $linha ['marca'];
-   $modelo = $linha ['modelo'];
-   $cor= $linha ['cor'];
-   $placa= $linha ['placa'];
-   $qportas= $linha ['qportas'];
+   $id= $linha ['id'];
+   $nome= $linha ['nome'];
+   $raca= $linha ['raca'];
+   $endereco= $linha ['endereco'];
+   $telefone= $linha ['telefone'];
+   $responsavel= $linha ['responsavel'];
 
     echo "
     
     <tr>
-    <td>$marca</td>
-    <td>$modelo</td>
-    <td>$cor</td>
-    <td>$placa</td>
-    <td>$qportas</td> 
+    <td>$nome</td>
+    <td>$raca</td>
+    <td>$endereco</td>
+    <td>$telefone</td>
+    <td>$responsavel</td> 
     <td>
-    <a href='tela_de_editar.php? id=$id' class='btn btn-success'> Editar </a>
+    <a href='tela_de_editar_pets.php? id=$id' class='btn btn-success'> Editar </a>
     <a href='#' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#confirmar'
     onClick= " . '"' . "pegar_dados( $id )" . '"'. ">Excluir</a>
     </td>
@@ -138,7 +144,7 @@ while ($linha= mysqli_fetch_assoc ( $dados)) {
       </div>
       <div class="modal-body">
 
-      <form action="../controller/excluir.php" method="POST">
+      <form action="../controller/excluir_pet.php" method="POST">
        <p> Realmente deseja EXCLUIR?</p>
       </div>
           <div class="modal-footer">

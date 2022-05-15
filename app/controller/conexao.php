@@ -15,14 +15,4 @@ if(!$conexao){
 
 }
 
-
-Function mensagem ($texto , $tip) {
-
-    //se for cadastrado faça  isso
-    header("location: ../screens/dashboard.php");
-    
-    echo"<div class='alert alert-$tip'  role='alert'>$texto</div>";
-    
-    }
-
 ?>
