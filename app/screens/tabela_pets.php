@@ -1,7 +1,7 @@
 <?php 
 
+    //seção iniciada
     session_start();
-    //include('verifica.php');
 
     //incluindo a conexao
     include('../controller/conexao.php');

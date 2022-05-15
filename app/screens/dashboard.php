@@ -1,8 +1,8 @@
 <?php 
 
+    //seção iniciada
     session_start();
-    //include('verifica.php');
-  
+
  ?>
 
 <!doctype html>

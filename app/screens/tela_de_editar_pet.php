@@ -1,6 +1,6 @@
 <?php
 
-//seção inciada
+//seção iniciada
 session_start();
 
 //incluindo arquivo de conexao 

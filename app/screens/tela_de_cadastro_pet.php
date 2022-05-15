@@ -1,10 +1,10 @@
 <?php 
 
-    session_start();
-    //include('verifica.php');
-  
+//seção iniciada
+session_start();
+
  ?>
- 
+
 <!DOCTYPE html>
 <html lang="PTBR">
 <head>

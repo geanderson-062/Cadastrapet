@@ -1,5 +1,8 @@
 <?php 
+
+     //seção iniciada
      session_start();
+     
  ?>
 
 <!doctype html>
