@@ -123,7 +123,7 @@ while ($linha= mysqli_fetch_assoc ( $dados)) {
     <td>$telefone</td>
     <td>$responsavel</td> 
     <td>
-    <a href='tela_de_editar_pets.php? id=$id' class='btn btn-success'> Editar </a>
+    <a href='tela_de_editar_pet.php? id=$id' class='btn btn-success'> Editar </a>
     <a href='#' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#confirmar'
     onClick= " . '"' . "pegar_dados( $id )" . '"'. ">Excluir</a>
     </td>

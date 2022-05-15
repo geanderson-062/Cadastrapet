@@ -7,10 +7,10 @@ session_start();
 include "../controller/conexao.php";
 
 //pegando o id 
-$idADM= $_GET ['idADM']?? '';
+$id= $_GET ['id']?? '';
 
 //selecionando a tabela 
-$sql= "SELECT * FROM `administrador` WHERE idADM = $idADM";
+$sql= "SELECT * FROM `pets` WHERE id = $id";
 
 //colocando vareaveis para editar
 $dados = mysqli_query($conexao , $sql);
@@ -65,9 +65,9 @@ $linha = mysqli_fetch_assoc($dados);
 </div>
 
  <section class="container corPrimaria" style="max-width: 400px; border-radius: 5px;">
-   <form method="post" action="cadastra_administrador.php">
+   <form method="post" action="../controller/editar_pet.php">
     <br>   
-     <p class="fs-2 text-white text-center">Atualizar cadastro</p>
+     <p class="fs-2 text-white text-center">Atualizar cadastro de pet</p>
 
      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
      <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_96g1yneg.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
@@ -96,7 +96,8 @@ $linha = mysqli_fetch_assoc($dados);
      <div class="d-grid gap-2 col-6 mx-auto">
 
        <input type="submit" class="btn btn-primary"  name="submit" id="submit" type="submit" value="Atualizar">
-        
+       <input type="hidden" name="id" value="<?php echo $linha ['id'];?>" >
+
      </div>
     <br>  
    </form>
@@ -124,6 +125,7 @@ $linha = mysqli_fetch_assoc($dados);
 </div>
 <script src="../assets/js/preloader.js"></script> 
 <link rel="stylesheet" href="../assets/css/preloader.css">
+
 <!--preloader-->
 
 <footer class="corPrimaria">

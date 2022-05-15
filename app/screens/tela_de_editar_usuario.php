@@ -7,10 +7,10 @@ session_start();
 include "../controller/conexao.php";
 
 //pegando o id 
-$idADM= $_GET ['idADM']?? '';
+$id= $_GET ['id']?? '';
 
 //selecionando a tabela 
-$sql= "SELECT * FROM `administrador` WHERE idADM = $idADM";
+$sql= "SELECT * FROM `usuarios` WHERE id = $id";
 
 //colocando vareaveis para editar
 $dados = mysqli_query($conexao , $sql);
@@ -65,7 +65,7 @@ $linha = mysqli_fetch_assoc($dados);
 </div>
 
  <section class="container corPrimaria" style="max-width: 400px; border-radius: 5px;">
-   <form method="post" action="cadastra_administrador.php">
+   <form method="post" action="../controller/editar_usuario.php">
     <br>   
      <p class="fs-2 text-white text-center">Atualizar cadastro</p>
 
@@ -73,8 +73,8 @@ $linha = mysqli_fetch_assoc($dados);
      <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_j0xeoest.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
 
       <div class="mb-3">
-        <label for="nome" class="form-label text-white">Email:</label>
-        <input required name="nome" type="email" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
+        <label for="email" class="form-label text-white">Email:</label>
+        <input required name="email" type="email" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
       </div>
   
       <div class="mb-3">
@@ -91,7 +91,8 @@ $linha = mysqli_fetch_assoc($dados);
      <div class="d-grid gap-2 col-6 mx-auto">
 
        <input type="submit" class="btn btn-primary"  name="submit" id="submit" type="submit" value="Atualizar">
-        
+       <input type="hidden" name="id" value="<?php echo $linha ['id'];?>" >
+
      </div>
     <br>  
    </form>
