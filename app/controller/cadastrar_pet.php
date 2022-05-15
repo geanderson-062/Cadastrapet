@@ -15,26 +15,41 @@
 include "conexao.php";
 
 //criando vareaveis para armazenar dados digitados no input
-$nomeADM= $_POST ['nomeADM'];
-$cpfADM= $_POST ['cpfADM'];
-$telefoneADM= $_POST ['telefoneADM'];
-$senhaADM= $_POST ['senhaADM'];
-$tipoADM= $_POST ['tipoADM'];
+$nome=$_POST ['nome'];
+$raca=$_POST ['raca'];
+$endereco=$_POST ['endereco'];
+$telefone=$_POST ['telefone'];
+$responsavel= $_POST ['responsavel'];
 
 ///inserindo valores na tabelda
-$sql= "INSERT INTO `administrador`( `cpfADM`, `nomeADM`, `telefoneADM`, `senhaADM`, `tipoADM`) 
-VALUES ('$cpfADM','$nomeADM','$telefoneADM','md5($senhaADM)','$tipoADM')";
+$sql= "INSERT INTO `pets`( `nome`, `raca`, `endereco`, `telefone`, `responsavel`) 
+VALUES ('$nome','$raca','$endereco','$telefone','$responsavel')";
 
 
 if (mysqli_query($conexao , $sql)) {
 
-    mensagem("$nomeADM, Alterado com sucesso" , 'success');
+      //se tudo deu certo faça isso
+
+      echo  "<script>
+      
+      alert('Pet cadastrado com sucesso');
+      window.location='../screens/dashboard.php';
+     
+      </script>";
+  
+
 }else {
 
-    mensagem("$nomeADM, NÃO Alterado com sucesso" , 'danger');
+     //caso contrario faça isso
+
+     echo  "<script>
+      
+     alert('pet NÃO cadastrado com sucesso');
+     window.location='../screens/tela_de_cadastro_pet.php';
+    
+     </script>";
+
 }
-
-
 
 ?>
 

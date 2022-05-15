@@ -31,7 +31,7 @@ CREATE TABLE `pets` (
   `id` int(11) NOT NULL,
   `nome` varchar(120) NOT NULL,
   `raca` varchar(120) NOT NULL,
-  `endeco` varchar(120) NOT NULL,
+  `endereco` varchar(120) NOT NULL,
   `telefone` varchar(120) NOT NULL,
   `responsavel` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
