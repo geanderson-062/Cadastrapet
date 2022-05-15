@@ -3,7 +3,7 @@
 $servidor="localhost"; //servidor usado
 $usuario="root";//usuario do banco
 $senha="";//senha do banco se tiver senha e esta 147258369
-$dbname="definitivo";//nome do banco
+$dbname="cadastrapet";//nome do banco
 
 $conexao = mysqli_connect($servidor,$usuario,$senha,$dbname);
 //conectando mysql com as vareaveis declaracadas a cima 
@@ -17,6 +17,8 @@ if(!$conexao){
 
 
 Function mensagem ($texto , $tip) {
+
+    //se for cadastrado faça  isso
     header("location: ../screens/dashboard.php");
     
     echo"<div class='alert alert-$tip'  role='alert'>$texto</div>";

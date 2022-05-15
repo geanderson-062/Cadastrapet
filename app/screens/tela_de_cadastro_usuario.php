@@ -54,8 +54,8 @@
           <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_Q1pZ8v.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
 
           <div class="mb-3">
-            <label for="nome" class="form-label text-white">Email:</label>
-            <input required name="nome" type="email" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
+            <label for="email" class="form-label text-white">Email:</label>
+            <input required name="email" type="email" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
           </div>
       
           <div class="mb-3">
@@ -100,6 +100,7 @@
 </div>
 <script src="../assets/js/preloader.js"></script> 
 <link rel="stylesheet" href="../assets/css/preloader.css">
+
 <!--preloader-->
 
 <script src="../assets/js/exibir_senha.js"></script>
