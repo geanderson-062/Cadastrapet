@@ -43,12 +43,12 @@
   </head>
   <body>
    
-
     <nav class="navbar navbar-light corPrimaria">
       <div class="container-fluid">
-          <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-2 text-white" href="#">
+         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-2 text-white" href="#">
           <img src="../assets/img/imgHome.png" alt="" width="50" height="50">
-          Cadastrapet </a>
+          Cadastrapet
+         </a>
       </div>
     </nav>
 
