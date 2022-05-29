@@ -7,7 +7,7 @@ include "../controller/conexao.php";
 $dados = array();
 
 //selecionando a tabela
-$sql = "SELECT * FROM `veiculos`";
+$sql = "SELECT * FROM `pets`";
 
 //vareavel que vai armazenar a consulta do banco
 $result = mysqli_query($conexao, $sql);

@@ -15,7 +15,7 @@ if(($result_pets) AND ($result_pets->rowCount() != 0)){
     while($row_pets = $result_pets->fetch(PDO::FETCH_ASSOC)){
         extract($row_pets);
 
-        $lista_produtos["pets"][$id] = [
+        $lista_pets["pets"][$id] = [
            
             'id' => $id,
             'nome' => $nome,
