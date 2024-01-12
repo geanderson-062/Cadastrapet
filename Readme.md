@@ -9,7 +9,7 @@ Este projeto foi desenvolvido para compor a nota na disciplina de Prática Profi
 
 ## Agradecimentos
 
-- Professor Marcones Lira - *Por fornecer orientação e suporte ao longo do projeto*
+- Professor Rafael Soares - *Por fornecer orientação e suporte ao longo do projeto*
 - Colegas de Classe - *Por feedback e sugestões*
 - UNINASSAU Caruaru - *Por fornecer a oportunidade e os recursos para desenvolver este projeto*
   
