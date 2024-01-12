@@ -3,6 +3,15 @@
 ## Descrição
 Este projeto é um sistema de gerenciamento de petshop, que inclui um sistema web e um sistema mobile. Foi desenvolvido como parte da conclusão da matéria de Desenvolvimento Mobile, ministrada pelo Professor Rafael Soares, no Centro Universitário UNINASSAU Caruaru.
 
+## Contexto Acadêmico
+
+Este projeto foi desenvolvido para compor a nota na disciplina de Prática Profissional do quinto período do curso de Análise e Desenvolvimento de Sistemas. O objetivo é aplicar os conhecimentos teóricos adquiridos durante o curso em um projeto prático e funcional.
+
+## Desenvolvedores
+
+- **Geanderson Ferreira**: Designer, Front-end, Back-end e Banco de Dados.
+- **Viviane Raquel**: Designer, Front-end, Back-end e Banco de Dados.
+  
 ### Sistema Web
 Uma interface administrativa para gerenciar cadastros, serviços e produtos do petshop.
 
