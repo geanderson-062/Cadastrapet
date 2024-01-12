@@ -7,6 +7,12 @@ Este projeto é um sistema de gerenciamento de petshop, que inclui um sistema we
 
 Este projeto foi desenvolvido para compor a nota na disciplina de Prática Profissional do quinto período do curso de Análise e Desenvolvimento de Sistemas. O objetivo é aplicar os conhecimentos teóricos adquiridos durante o curso em um projeto prático e funcional.
 
+## Agradecimentos
+
+- Professor Marcones Lira - *Por fornecer orientação e suporte ao longo do projeto*
+- Colegas de Classe - *Por feedback e sugestões*
+- UNINASSAU Caruaru - *Por fornecer a oportunidade e os recursos para desenvolver este projeto*
+  
 ## Desenvolvedores
 
 - **Geanderson Ferreira**: Designer, Front-end, Back-end e Banco de Dados.
