@@ -1,33 +1,44 @@
-sistema de gerenciamento de petshop 
+# Sistema de Gerenciamento de Petshop
 
-1 sistema web
+## Descrição
+Este projeto é um sistema de gerenciamento de petshop, que inclui um sistema web e um sistema mobile. Foi desenvolvido como parte da conclusão da matéria de Desenvolvimento Mobile, ministrada pelo Professor Rafael Soares, no Centro Universitário UNINASSAU Caruaru.
 
-2 sistema mobile
+### Sistema Web
+Uma interface administrativa para gerenciar cadastros, serviços e produtos do petshop.
 
-#avaliacao de Dev Mobile
+### Sistema Mobile
+Focado na experiência do usuário, proporcionando facilidade de acesso e interação com o petshop. [Versão Mobile do Projeto](https://github.com/geanderson-062/cadastrapet-mobile)
 
-1- componetizaCao
-2- organizado e estruturado
-3- login e senha 
-4- home com os menus 
-5- nos menus 4 opcoes de menu
-5.1- cadastro
-5.2- edicao do cadastro
-5.3- listagem de cadastro
-5.4- exclusao de cadastro
+## Avaliação de Desenvolvimento Mobile
+O aplicativo mobile foi desenvolvido com foco em:
 
+1. **Componentização:** Utilização de código modular.
+2. **Organização e Estrutura:** Estruturação clara e organizada.
+3. **Login e Senha:** Sistema seguro de autenticação.
+4. **Home com Menus:** Interface intuitiva.
+5. **Opções de Menu:** 
+   - **5.1 Cadastro**
+   - **5.2 Edição de Cadastro**
+   - **5.3 Listagem de Cadastro**
+   - **5.4 Exclusão de Cadastro**
 
-Desenvolver API com PHP para retornar um json
-Banco de dados? 
+## Backend
+Desenvolvido em PHP, com uma API que retorna dados em formato JSON, interagindo com um banco de dados para operações de CRUD.
 
-comando fecht para consumir api
+### Banco de Dados
+Armazenamento de informações de cadastro e outras operações essenciais.
 
-# cores
+### Consumo da API
+Frontend consome a API utilizando comandos `fetch`.
 
-#00a000 cor primaria
+## Design e Cores
+Segue uma paleta de cores definida:
 
-#005100 cor de fundo 
+- **Cor Primária:** `#00a000`
+- **Cor de Fundo:** `#005100`
 
+---
 
+Este projeto foi desenvolvido para a conclusão da matéria de Desenvolvimento Mobile, orientado pelo Professor Rafael Soares, no Centro Universitário UNINASSAU Caruaru. Este README oferece uma visão geral do sistema de gerenciamento de petshop. Para detalhes adicionais, consulte a documentação específica.
 
 
